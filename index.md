@@ -15,6 +15,8 @@ Your players' saves, **migrated across updates, recovered from corruption, and s
 [Get started]({{ site.baseurl }}/docs/getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Buy on the Unity Asset Store](https://assetstore.unity.com/publishers/118262){: .btn .fs-5 .mb-4 .mb-md-0 }
 
+![SaveVault — your players' saves, migrated, recovered, synced]({{ site.baseurl }}/assets/images/cover-2400x1600.png)
+
 ---
 
 ## The morning every shipped game meets
@@ -27,13 +29,25 @@ You release an update, the save format changed, and your players' old saves eith
 - **Integrity sealing** — saves are sealed with HMAC-SHA256. A tampered or hand-edited save is detected on load and recovered from backup, with the cause named in plain language.
 - **Local-first cloud sync** — section- and field-level merge resolution: when two devices change different fields, both changes survive the merge; conflicting copies are preserved in quarantine, not overwritten. Backends included for local folders and REST endpoints, plus a Steam Cloud adapter.
 
+## Watch it work
+
+<video controls width="100%" src="{{ site.baseurl }}/assets/video/savevault-overview.mp4"></video>
+
+![The Wayfarer panel, live: a save is written, then a load is checked against its seal — a file that fails the check is refused and quarantined, never silently loaded]({{ site.baseurl }}/assets/images/savevault-migration-beat.gif)
+
 ## See it work in ten minutes
 
 The **Wayfarer sample code** ships in the package under `Samples~`: a reference save panel, a sample hero, the sample migration chain, and a real v1 save fixture. No sample scene ships — the panel components drop into any scene of your own, a two-minute wiring job. Load the v1 fixture through the panel and it migrates to the current format through its registered steps (coins-to-gold, then split-health), with the Migration Report naming every step that ran. Then simulate a bit-flip corruption and load again: the hero comes back from backup. See [The Wayfarer Sample]({{ site.baseurl }}/docs/wayfarer-sample/).
 
+![The Wayfarer panel — the sample's own surface: add gold, save now, load, and load the shipped v1 fixture]({{ site.baseurl }}/assets/images/showcase-04.png)
+
 ## One home window
 
 **Tools → Decnet Games → SaveVault** opens SaveVault Home: Welcome with one-click setup and verification, Storage Status, Migration Centre, Save Health & Diagnostics, Sync Lab, and Settings. Everything SaveVault does in the Editor lives in that one window — see [The Home Window]({{ site.baseurl }}/docs/home-window/).
+
+![The Migration Centre — three registered chains, every step visible]({{ site.baseurl }}/assets/images/showcase-01.png)
+
+![Sync Lab — the two-device review surface; Steam Cloud appears here as a local mock only, the adapter is mock-verified]({{ site.baseurl }}/assets/images/showcase-13.png)
 
 ## The honest frame
 

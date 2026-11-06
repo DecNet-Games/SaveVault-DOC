@@ -29,6 +29,21 @@ Bulk pushes go via laptop git over SSH — never the GitHub connector.
    - nav order: Home, Getting Started, Installation, Quick Start, The Home Window, One-Click Setup, Storage Status, Versioned Schemas, Migration Centre, Atomic Persistence, Integrity Sealing, Backups & Recovery, Save Health & Diagnostics, Sync Lab, Cloud Backends & Merge Resolution, Steam Cloud, The Wayfarer Sample, Settings, What v1 Is Not, FAQ, Troubleshooting, Changelog, Support.
 5. Only after the site is live: apply the house-format description (`../DESCRIPTION-HOUSE.md`) to the portal draft when it is created — its link line carries `DOCUMENTATION → https://decnet-games.github.io/SaveVault-DOC/` (dead-link rule: never publish the link before the site resolves).
 
+## Addendum — 2026-11-06 (doc/listing prep lane, VM-side)
+
+- `_config.yml`: the `description:` value is now quoted (unquoted values
+  containing ": " break the Pages YAML build — the Intake/Extraction lesson).
+- `index.md` now embeds the final media filenames (cover → video → GIF →
+  showcase stills, Intake-DOC pattern) and `assets/images/` + `assets/video/`
+  exist with the exact slots listed in `MEDIA-SLOTS.md`. No media files are in
+  the tree yet — they land with the production set. **Do not push `index.md`
+  before the 6 media files are in `assets/…`; the media commit is one step**
+  (files in → push `main` + `gh-pages` → curl 200 + media visible).
+- The "No media in this tree, by design" line above described the 2026-11-05
+  text-only build; the DOC-SITE-STANDARD (§4) makes media mandatory for the
+  finished site, so the slots are now prepared and the text-only state is a
+  waiting state, not a complete one.
+
 ## What remains
 
 - Repo creation + push + Pages enable: BOSS-side steps above (by design — this build stopped at a complete local tree, per instructions).

@@ -5,7 +5,7 @@
 # github-pages gem in the Gemfile is the working setup.)
 
 title: SaveVault
-description: Documentation for SaveVault — the versioned save system for Unity with automatic save migrations, corruption recovery, tamper detection and local-first cloud sync.
+description: "Documentation for SaveVault — the versioned save system for Unity with automatic save migrations, corruption recovery, tamper detection and local-first cloud sync."
 baseurl: "/SaveVault-DOC"
 url: "https://decnet-games.github.io"
 repository: DecNet-Games/SaveVault-DOC
@@ -43,6 +43,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - PUSH-NOTE.md
+  - MEDIA-SLOTS.md
   - README.md
   - vendor/
   - node_modules/
